@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,a){"use strict";a.r(e);var l=function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",{staticClass:"about"},[a("h1",[t._v("This is an about page")]),a("el-button",[t._v("添加一个按钮")]),a("el-form",[a("el-form-item",{attrs:{label:"随便一个输入框"}},[a("el-input")],1)],1)],1)},n=[],s=a("2877"),u={},o=Object(s["a"])(u,l,n,!1,null,null,null);e["default"]=o.exports}}]);
+//# sourceMappingURL=about.b056cf9b.js.map
