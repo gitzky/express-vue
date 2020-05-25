@@ -7,12 +7,12 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   namespaced: true,
   state: {
-    token: null
+    token: null,
   },
   mutations: {
     SET_TOKEN: (state, token) => {
       state.token = token;
-    }
+    },
   },
   actions: {
     async login(context, arg) {
@@ -22,11 +22,20 @@ export default new Vuex.Store({
     },
 
     async selUserList(context, arg) {
+      console.log("arg", arg);
       const response = request.post("/api/selUserList", {
-        ...arg
+        arg,
       });
       return response;
-    }
+    },
+
+    async selPostList(context, arg) {
+      console.log("arg", arg);
+      const response = request.post("/api/selPostList", {
+        arg,
+      });
+      return response;
+    },
   },
-  modules: {}
+  modules: {},
 });

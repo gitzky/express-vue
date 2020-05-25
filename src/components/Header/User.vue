@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <div class="z_user">
+      <template v-if="false">
+        <span class="vertical_m cursor">
+          <span>登录</span>
+        </span>
+        <el-divider direction="vertical"></el-divider>
+        <span class="vertical_m cursor">
+          <span>注册</span>
+        </span>
+      </template>
+      <template v-else>
+        <span class="vertical_m">
+          <i class="el-icon-s-custom"></i>
+          <span>用户：</span>
+          <span class="white cursor">小元元</span>
+        </span>
+        <el-divider direction="vertical"></el-divider>
+        <span class="cursor vertical_m">
+          <i class="el-icon-switch-button"></i>
+          <span>退出</span>
+        </span>
+      </template>
+    </div>
+  </div>
+</template>

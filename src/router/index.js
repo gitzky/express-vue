@@ -1,29 +1,81 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Layout from "@/Layout";
 
-Vue.use(VueRouter)
+Vue.use(Router);
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
-  }
-]
+export default new Router({
+  routes: [
+    {
+      path: "/",
+      redirect: "/index",
+      component: Layout,
+      children: [
+        {
+          path: "/index",
+          name: "Index",
+          component: () => import("@/views/index"),
+        },
 
-const router = new VueRouter({
-  routes
-})
+        {
+          path: "/list",
+          name: "List",
+          component: () => import("@/views/list"),
+        },
 
-export default router
+        {
+          path: "/list/details/:id",
+          name: "Details",
+          component: () => import("@/views/details"),
+        },
+
+        {
+          path: "/notes",
+          name: "Notes",
+          component: () => import("@/views/notes-list"),
+        },
+
+        {
+          path: "/home",
+          name: "Home",
+          component: () => import("@/views/home"),
+        },
+
+        {
+          path: "echarts",
+          name: "echarts",
+          component: () => import("@/views/echarts"),
+        },
+
+        {
+          path: "editor",
+          name: "editor",
+          component: () => import("@/views/editor"),
+        },
+
+        {
+          path: "dialog",
+          name: "dialog",
+          component: () => import("@/views/el-dialog"),
+        },
+
+        {
+          path: "form",
+          name: "form",
+          component: () => import("@/views/el-form"),
+        },
+
+        {
+          path: "images",
+          name: "images",
+          component: () => import("@/views/images"),
+        },
+        {
+          path: "map",
+          name: "map",
+          component: () => import("@/views/amap"),
+        },
+      ],
+    },
+  ],
+});
