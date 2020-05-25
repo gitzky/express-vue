@@ -12,6 +12,7 @@
           height="400px" width="600px"  // 宽高
           @handleChart="handleChart"   // 实例方法
         />
+        
       </textarea>
       <div class="box10"></div>
       <el-button type="primary" @click="goPage('/echarts')">echarts控件</el-button>
