@@ -20,7 +20,7 @@
         <el-container class="mar20_b">
           <el-main class="border b_white pad20 min_h360">
             <el-tabs v-model="activeName" @tab-click="handleClick">
-              <el-tab-pane label="我的文章" name="first">
+              <el-tab-pane label="发布的文章" name="first">
                 <div class="mar20_b border_b" v-for="(item,n) in tableData" :key="n" shadow="nevel">
                   <a href="javascript:;" @click="$router.push('/list/details/'+item.id)">
                     <p class="normal ellipsis f18 fb">我是文综昂内容</p>
@@ -49,58 +49,32 @@
                   ></el-pagination>
                 </div>
               </el-tab-pane>
-              <el-tab-pane label="我的留言" name="second">
-                <template>
-                  <el-row class="mar10_t">
-                    <el-col :span="2" class="text-center">
-                      <el-image :src="headIcon" class="w40 border radius50"></el-image>
-                    </el-col>
-                    <el-col :span="22">
-                      <div class="clear">
-                        <span class="fb block line_h40 left">琳水一梦</span>
-                        <el-link class="right line_h40 mar10_lr">回复</el-link>
-                      </div>
-                    </el-col>
-                  </el-row>
-                  <el-row class="pad10_b">
-                    <el-col :span="2">&nbsp;</el-col>
-                    <el-col :span="22">
-                      <span
-                        class="block mar10_b"
-                      >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
-                      <div class="border_l block pad10 mar10_tb">
-                        <div class="clear">
-                          <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
-                          <span class="left line_h40 pad10_lr fb">smileNicky</span>
-                          <span class="left line_h40 pad10_lr gray_9">回复</span>
-                          <span class="left line_h40 pad10_lr fb">琳水一梦</span>
-                          <span class="left line_h40 pad10_lr gray_9">1周前</span>
-                          <el-link class="right line_h40">回复</el-link>
-                        </div>
-                        <p
-                          class="pad50_l mar0"
-                        >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</p>
-                      </div>
-                      <div class="border_l block pad10 mar10_tb">
-                        <div class="clear">
-                          <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
-                          <span class="left line_h40 pad10_lr fb">smileNicky</span>
-                          <span class="left line_h40 pad10_lr gray_9">回复</span>
-                          <span class="left line_h40 pad10_lr fb">琳水一梦</span>
-                          <span class="left line_h40 pad10_lr gray_9">1周前</span>
-                          <el-link class="right line_h40">回复</el-link>
-                        </div>
-                        <p
-                          class="pad50_l mar0"
-                        >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</p>
-                        <div class="mar10_tb clear">
-                          <el-image :src="headIcon" class="w40 border radius50 left mar10_r"></el-image>
-                          <el-input class="left w680" type="textarea" placeholder="回复他" :rows="4"></el-input>
-                        </div>
-                      </div>
-                    </el-col>
-                  </el-row>
-                </template>
+              <el-tab-pane label="收藏的文章" name="second">
+                <div class="mar20_b border_b" v-for="(item,n) in tableData" :key="n" shadow="nevel">
+                  <a href="javascript:;" @click="$router.push('/list/details/'+item.id)">
+                    <p class="normal ellipsis f18 fb">我是文综昂内容</p>
+                    <p class="normal ellipsis-2">精读Javascript系列（三） 执行上下文、 执行栈、初识事件循环</p>
+                    <p class="clear normal mar10_tb">
+                      <span class="left gray_9">
+                        <i class="el-icon-view"></i>
+                        <em>阅读：88</em>
+                      </span>
+                      <span class="gray_9 right">
+                        <i class="el-icon-time"></i>
+                        <em>日期：2019-9-9</em>
+                      </span>
+                    </p>
+                  </a>
+                </div>
+                <div class="text-right">
+                  <el-pagination
+                    class="right"
+                    background
+                    layout="prev, pager, next"
+                    :total="100"
+                    @current-change="currentChange"
+                  ></el-pagination>
+                </div>
               </el-tab-pane>
               <el-tab-pane label="编辑文章" name="three">
                 <div class="mar20_b">

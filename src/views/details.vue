@@ -16,7 +16,7 @@
                 <el-image :src="headIcon" class="w60 border radius50 left"></el-image>
                 <div class="left pad10_lr">
                   <p class="f16 normal line_h30">小元元</p>
-                  <a href="/home" class="c_blue block line_h30">个人主页</a>
+                  <a href="/home" class="c_blue block line_h30">Ta的主页</a>
                 </div>
               </div>
               <div class="box20"></div>
@@ -50,7 +50,7 @@
               <div class="line"></div>
               <div class="clear pad20_t">
                 <el-button size="small" type="danger" class="w100 left">关注</el-button>
-                <el-button size="small" type="primary" class="w100 right">私信</el-button>
+                <el-button size="small" type="info" class="w100 right">私信</el-button>
               </div>
             </el-main>
           </div>

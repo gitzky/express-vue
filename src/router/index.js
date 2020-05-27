@@ -40,41 +40,57 @@ export default new Router({
           name: "Home",
           component: () => import("@/views/home"),
         },
-
         {
-          path: "echarts",
-          name: "echarts",
-          component: () => import("@/views/echarts"),
+          path: "/home/details/:id",
+          name: "Details",
+          component: () => import("@/views/details"),
+        },
+        {
+          path: "/about",
+          name: "about",
+          component: () => import("@/views/about"),
         },
 
         {
-          path: "editor",
-          name: "editor",
-          component: () => import("@/views/editor"),
+          path: "/about/details/:id",
+          name: "Details",
+          component: () => import("@/views/details"),
         },
 
-        {
-          path: "dialog",
-          name: "dialog",
-          component: () => import("@/views/el-dialog"),
-        },
+        // {
+        //   path: "echarts",
+        //   name: "echarts",
+        //   component: () => import("@/views/echarts"),
+        // },
 
-        {
-          path: "form",
-          name: "form",
-          component: () => import("@/views/el-form"),
-        },
+        // {
+        //   path: "editor",
+        //   name: "editor",
+        //   component: () => import("@/views/editor"),
+        // },
 
-        {
-          path: "images",
-          name: "images",
-          component: () => import("@/views/images"),
-        },
-        {
-          path: "map",
-          name: "map",
-          component: () => import("@/views/amap"),
-        },
+        // {
+        //   path: "dialog",
+        //   name: "dialog",
+        //   component: () => import("@/views/el-dialog"),
+        // },
+
+        // {
+        //   path: "form",
+        //   name: "form",
+        //   component: () => import("@/views/el-form"),
+        // },
+
+        // {
+        //   path: "images",
+        //   name: "images",
+        //   component: () => import("@/views/images"),
+        // },
+        // {
+        //   path: "map",
+        //   name: "map",
+        //   component: () => import("@/views/amap"),
+        // },
       ],
     },
   ],
