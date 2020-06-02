@@ -12,6 +12,11 @@ export default new Router({
       component: Layout,
       children: [
         {
+          path: "/404", // 页面不存在的情况下会跳到404页面
+          name: "notFound",
+          component: () => import("@/views/components/Exception/index.vue"),
+        },
+        {
           path: "/index",
           name: "Index",
           component: () => import("@/views/index"),
@@ -91,6 +96,12 @@ export default new Router({
         //   name: "map",
         //   component: () => import("@/views/amap"),
         // },
+        {
+          path: "*", // 页面不存在的情况下会跳到404页面
+          redirect: "/404",
+          name: "notFound",
+          hidden: true,
+        },
       ],
     },
   ],
