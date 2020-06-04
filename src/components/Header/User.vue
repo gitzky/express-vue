@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="z_user">
-      <template v-if="false">
-        <span class="vertical_m cursor">
+      <template v-if="true">
+        <span class="vertical_m cursor" @click="$router.push('/login')">
           <span>登录</span>
         </span>
         <el-divider direction="vertical"></el-divider>
-        <span class="vertical_m cursor">
+        <span class="vertical_m cursor" @click="$router.push('/register')">
           <span>注册</span>
         </span>
       </template>

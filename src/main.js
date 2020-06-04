@@ -16,8 +16,9 @@ Vue.use(ElementUI);
 
 import VueAMap from "vue-amap";
 Vue.use(VueAMap);
+
 VueAMap.initAMapApiLoader({
-  key: "your amap key",
+  key: "0f89c5a4c96f635a42738ae15f07442b",
   plugin: [
     "AMap.Autocomplete",
     "AMap.PlaceSearch",
@@ -26,10 +27,11 @@ VueAMap.initAMapApiLoader({
     "AMap.ToolBar",
     "AMap.MapType",
     "AMap.PolyEditor",
-    "AMap.CircleEditor"
+    "AMap.CircleEditor",
+    "AMap.Geolocation",
   ],
   // 默认高德 sdk 版本为 1.4.4
-  v: "1.4.4"
+  v: "1.4.4",
 });
 
 import "./assets/css/index.scss";
@@ -41,5 +43,5 @@ new Vue({
   store,
   render: function(h) {
     return h(App);
-  }
+  },
 }).$mount("#app");

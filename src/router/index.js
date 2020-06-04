@@ -1,11 +1,34 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Layout from "@/Layout";
+import Main from "@/Layout/main";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
+    {
+      path: "/register", // 登录页面
+      component: Main,
+      children: [
+        {
+          path: "/register", // 页面不存在的情况下会跳到404页面
+          name: "register",
+          component: () => import("@/views/login/register"),
+        },
+      ],
+    },
+    {
+      path: "/login", // 登录页面
+      component: Main,
+      children: [
+        {
+          path: "/login", // 页面不存在的情况下会跳到404页面
+          name: "login",
+          component: () => import("@/views/login/index"),
+        },
+      ],
+    },
     {
       path: "/",
       redirect: "/index",
@@ -14,14 +37,22 @@ export default new Router({
         {
           path: "/404", // 页面不存在的情况下会跳到404页面
           name: "notFound",
-          component: () => import("@/views/components/Exception/index.vue"),
+          component: () => import("@/components/Exception/index.vue"),
         },
+        /*************  index  **************/
         {
           path: "/index",
           name: "Index",
           component: () => import("@/views/index"),
         },
 
+        {
+          path: "/index/details/:id",
+          name: "IndexDetails",
+          component: () => import("@/views/details"),
+        },
+
+        /*************  list  **************/
         {
           path: "/list",
           name: "List",
@@ -30,16 +61,23 @@ export default new Router({
 
         {
           path: "/list/details/:id",
-          name: "Details",
+          name: "ListDetails",
           component: () => import("@/views/details"),
         },
 
+        /*************  notes  **************/
         {
           path: "/notes",
           name: "Notes",
-          component: () => import("@/views/notes-list"),
+          component: () => import("@/views/list-notes"),
+        },
+        {
+          path: "/notes/details/:id",
+          name: "NotesDetails",
+          component: () => import("@/views/details"),
         },
 
+        /*************  home  **************/
         {
           path: "/home",
           name: "Home",
@@ -47,19 +85,41 @@ export default new Router({
         },
         {
           path: "/home/details/:id",
-          name: "Details",
+          name: "HomeDetails",
           component: () => import("@/views/details"),
         },
+
+        /*************  homeOther  **************/
+        {
+          path: "/homeOther",
+          name: "homeOther",
+          component: () => import("@/views/home-other"),
+        },
+        {
+          path: "/homeOther/details/:id",
+          name: "HomeOtherDetails",
+          component: () => import("@/views/details"),
+        },
+
+        /*************  关于  **************/
         {
           path: "/about",
           name: "about",
           component: () => import("@/views/about"),
         },
 
+        /*************  个人  **************/
         {
-          path: "/about/details/:id",
-          name: "Details",
-          component: () => import("@/views/details"),
+          path: "/mine",
+          name: "Mine",
+          component: () => import("@/views/mine"),
+        },
+
+        {
+          path: "*", // 页面不存在的情况下会跳到404页面
+          redirect: "/404",
+          name: "notFound",
+          hidden: true,
         },
 
         // {
@@ -96,12 +156,6 @@ export default new Router({
         //   name: "map",
         //   component: () => import("@/views/amap"),
         // },
-        {
-          path: "*", // 页面不存在的情况下会跳到404页面
-          redirect: "/404",
-          name: "notFound",
-          hidden: true,
-        },
       ],
     },
   ],

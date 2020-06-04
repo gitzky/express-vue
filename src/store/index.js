@@ -15,8 +15,18 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    // 注册
+    async register(context, arg) {
+      const response = request.post("/api/register", {
+        ...arg,
+      });
+      return response;
+    },
+
     async login(context, arg) {
-      const response = request.post("/api/login");
+      const response = request.post("/api/login", {
+        ...arg,
+      });
       const token = response.data.token;
       commit("SET_TOKEN", token);
     },
@@ -24,7 +34,7 @@ export default new Vuex.Store({
     async selUserList(context, arg) {
       console.log("arg", arg);
       const response = request.post("/api/selUserList", {
-        arg,
+        ...arg,
       });
       return response;
     },
@@ -32,7 +42,7 @@ export default new Vuex.Store({
     async selPostList(context, arg) {
       console.log("arg", arg);
       const response = request.post("/api/selPostList", {
-        arg,
+        ...arg,
       });
       return response;
     },

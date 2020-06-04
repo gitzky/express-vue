@@ -1,0 +1,306 @@
+._login {
+  /*-- content --*/
+  h1 {
+    font-size: 3.5em;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+    font-style: italic;
+    margin: 3vw 1vw;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .c_red {
+    color: #f7296f;
+  }
+  h1 span,
+  h2 i,
+  .validate span,
+  .validate i {
+    color: #f7296f;
+  }
+  .el-popover.validate {
+    padding: 10px 10px;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+  }
+  .sub-main-w3 {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  .sub-main-w3 form {
+    max-width: 600px;
+    margin: 3.5vw 5vw;
+    background: rgba(77, 74, 74, 0.7);
+    padding: 2vw 3.5vw;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 8px solid #f7296f;
+    border-radius: 30px 30px 50px 50px;
+  }
+  ._register.sub-main-w3 form {
+    margin: 1vw 5vw;
+  }
+
+  .form-style-agile {
+    margin-bottom: 1.5em;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+  }
+
+  .sub-main-w3 label {
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  .sub-main-w3 label i {
+    font-size: 16px;
+    margin-left: 4px;
+    color: #f7296f;
+    border-radius: 50%;
+    line-height: 1.9;
+    text-align: center;
+  }
+
+  .form-style-agile input[type='text'],
+  .form-style-agile input[type='password'] {
+    width: 100%;
+    color: #000;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid #000;
+    background: #fff;
+  }
+
+  .form-style-agile input[type='text'].verify,
+  span.verify {
+    width: 50%;
+  }
+  span.verify {
+    display: block;
+    width: 50%;
+    background: #fff;
+    padding: 15px 15px;
+    height: 51px;
+    float: right;
+    border: 1px solid #000;
+    border-left: none;
+    text-align: center;
+  }
+
+  .sub-main-w3 input[type='button'] {
+    color: #fff;
+    background: #aaa;
+
+    border: none;
+    padding: 13px 0;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.49);
+  }
+
+  .sub-main-w3 input[type='button'].active {
+    background: #f7296f;
+  }
+  .sub-main-w3 input[type='button']:hover {
+    background: #aaa;
+    color: #fff;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+
+  .sub-main-w3 .pass {
+    position: relative;
+    em {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      color: #888;
+    }
+  }
+
+  .wthree-text {
+    width: 100%;
+  }
+
+  .wthree-text ul li:nth-child(1) {
+    float: left;
+  }
+
+  .wthree-text ul li:nth-child(2) {
+    float: right;
+  }
+
+  .wthree-text ul li {
+    display: inline-block;
+  }
+
+  .wthree-text ul li a {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /*-- checkbox --*/
+
+  .wthree-text label {
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .wthree-text {
+    text-align: center;
+  }
+
+  input.checkbox {
+    background: #f7296f;
+    cursor: pointer;
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: text-bottom;
+  }
+
+  input.checkbox:before {
+    content: '';
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    background: inherit;
+    cursor: pointer;
+  }
+
+  input.checkbox:after {
+    content: '';
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    z-index: 1;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #fff;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+
+  input.checkbox:checked:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 0.5rem;
+    border-color: #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+
+  .anim input.checkbox:checked:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 0.5rem;
+    border-color: transparent;
+    border-right-color: transparent;
+    animation: 0.4s rippling 0.4s ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rippling {
+    50% {
+      border-left-color: #fff;
+    }
+    100% {
+      border-bottom-color: #fff;
+      border-left-color: #fff;
+    }
+  }
+
+  /*-- //checkbox --*/
+
+  /*--responsive--*/
+
+  @media (max-width: 480px) {
+    .sub-main-w3 form {
+      padding: 7.5vw;
+    }
+  }
+
+  @media (max-width: 414px) {
+    .form-style-agile input[type='text'],
+    .form-style-agile input[type='password'] {
+      font-size: 13px;
+      padding: 13px 15px;
+    }
+    .wthree-text ul li:nth-child(1),
+    .wthree-text ul li:nth-child(2) {
+      float: none;
+    }
+    .wthree-text ul li:nth-child(2) {
+      margin-top: 10px;
+    }
+    .sub-main-w3 input[type='button'] {
+      width: 56%;
+    }
+    .wthree-text ul li {
+      display: block;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .sub-main-w3 form {
+      padding: 25px 14px;
+    }
+  }
+
+  /*--//responsive--*/
+}
