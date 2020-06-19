@@ -3,9 +3,7 @@
     <div class="sub-main-w3">
       <form>
         <h2>
-          <span class="cursor c_red" @click="$router.push('/login')"
-            >登 录 </span
-          >/
+          <span class="cursor c_red" @click="$router.push('/login')">登 录</span>/
           <span class="cursor" @click="$router.push('/register')">注 册</span>
         </h2>
         <div class="form-style-agile">
@@ -22,7 +20,7 @@
             v-model="validateUserName.visible"
           >
             <span class="c_red40">
-              <i class="el-icon-warning-outline "></i>
+              <i class="el-icon-warning-outline"></i>
               {{ validateUserName.message }}
             </span>
 
@@ -49,7 +47,7 @@
             v-model="validatePassword.visible"
           >
             <span class="c_red40">
-              <i class="el-icon-warning-outline "></i>
+              <i class="el-icon-warning-outline"></i>
               {{ validatePassword.message }}
             </span>
             <div slot="reference" class="pass">
@@ -75,10 +73,7 @@
             验 证
           </label>
 
-          <verify
-            :successFun="onMpanelSuccess"
-            :errorFun="onMpanelError"
-          ></verify>
+          <verify :successFun="onMpanelSuccess" :errorFun="onMpanelError"></verify>
         </div>
 
         <!-- checkbox -->
@@ -86,7 +81,7 @@
           <ul>
             <li>
               <label class="anim">
-                <input type="checkbox" class="checkbox" required="" checked />
+                <input type="checkbox" class="checkbox" required checked />
                 <span class="mar10_l">记住密码</span>
               </label>
             </li>
@@ -117,18 +112,18 @@ import verify from "./verify";
 
 export default {
   components: {
-    verify,
+    verify
   },
   data() {
     return {
       viewPass: false,
       form: {
         userName: "",
-        password: "",
+        password: ""
       },
       verifyPass: false,
       validateUserName: { visible: false, message: "" },
-      validatePassword: { visible: false, message: "" },
+      validatePassword: { visible: false, message: "" }
     };
   },
 
@@ -175,18 +170,6 @@ export default {
       }
     },
 
-    submitRegisterForm() {
-      this.handleUserName();
-      this.handlePassword();
-      let { validateUserName, validatePassword, verifyPass } = this;
-      if (validateUserName.visible || validatePassword.visible || !verifyPass) {
-        return;
-      }
-      this.$store.dispatch("register", {
-        name: this.form.userName,
-        pass: this.form.password,
-      });
-    },
     submitLoginForm() {
       this.handleUserName();
       this.handlePassword();
@@ -194,7 +177,7 @@ export default {
         validateUserName,
         validatePassword,
 
-        verifyPass,
+        verifyPass
       } = this;
       if (validateUserName.visible || validatePassword.visible || !verifyPass) {
         return;
@@ -202,15 +185,18 @@ export default {
       this.$store
         .dispatch("login", {
           name: this.form.userName,
-          pass: this.form.password,
+          pass: this.form.password
         })
-        .then((res) => {
+        .then(res => {
           if (res.code === "0") {
+            sessionStorage.setItem("token", res.data.token);
             this.$router.push("/index");
+          } else {
+            this.$message.error(res.msg);
           }
         });
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -204,7 +204,7 @@ export default {
           wWidth * 0.5
         );
         // 40, 20, 105
-        gradient[2].addColorStop(0, "rgba(154, 135, 102)");
+        gradient[2].addColorStop(0, "rgb(154, 135, 102)");
         gradient[2].addColorStop(0.3, "transparent");
 
         bctx.beginPath();

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="z_user">
-      <template v-if="true">
+      <template v-if="getToken">
         <span class="vertical_m cursor" @click="$router.push('/login')">
           <span>登录</span>
         </span>
@@ -25,3 +25,14 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  created() {},
+  computed: {
+    getToken() {
+      var token = sessionStorage.getItem("token");
+      return token;
+    }
+  }
+};
+</script>
