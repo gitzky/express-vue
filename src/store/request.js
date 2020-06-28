@@ -1,5 +1,6 @@
 import axios from 'axios'
 // 创建axios实例
+
 console.log(process.env)
 const request = axios.create({
   baseURL: '/', // api的base_url
@@ -16,6 +17,21 @@ const request = axios.create({
     },
   ],
 })
+
+// 在请求头中加token
+request.interceptors.request.use(
+  (config) => {
+    // 判断是否存在token，如果存在的话，则每个http header都加上token
+    let token = localStorage.getItem('authorization')
+    if (!config.headers.hasOwnProperty('authorization') && token) {
+      config.headers.authorization = token
+    }
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  },
+)
 
 request.interceptors.response.use(
   (response) => {

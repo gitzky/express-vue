@@ -189,7 +189,7 @@ export default {
         })
         .then(res => {
           if (res.code === "0") {
-            sessionStorage.setItem("token", res.data.token);
+            localStorage.setItem("authorization", "Bearer " + res.data.token);
             this.$router.push("/index");
           } else {
             this.$message.error(res.msg);

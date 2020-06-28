@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="z_user">
-      <template v-if="getToken">
+      <template v-if="!userInfo">
         <span class="vertical_m cursor" @click="$router.push('/login')">
           <span>登录</span>
         </span>
@@ -14,10 +14,10 @@
         <span class="vertical_m">
           <i class="el-icon-s-custom"></i>
           <span>用户：</span>
-          <span class="white cursor">小元元</span>
+          <span class="white cursor">{{userInfo&&userInfo.name}}</span>
         </span>
         <el-divider direction="vertical"></el-divider>
-        <span class="cursor vertical_m">
+        <span class="cursor vertical_m" @click="logoutNow">
           <i class="el-icon-switch-button"></i>
           <span>退出</span>
         </span>
@@ -27,11 +27,26 @@
 </template>
 <script>
 export default {
-  created() {},
-  computed: {
-    getToken() {
-      var token = sessionStorage.getItem("token");
-      return token;
+  data() {
+    return {
+      userInfo: null
+    };
+  },
+  created() {
+    var token = localStorage.getItem("authorization");
+    console.log("token", token);
+    this.$store.dispatch("getMemberByToken").then(res => {
+      console.log("res", res);
+      if (res.code === "0" && res.data) {
+        this.userInfo = res.data;
+      }
+    });
+  },
+
+  methods: {
+    logoutNow() {
+      localStorage.removeItem("authorization");
+      window.location.reload();
     }
   }
 };
