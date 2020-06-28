@@ -1,5 +1,5 @@
 <template>
-  <el-main class="block">
+  <el-main class="block pad20_0">
     <div class="b_white pad15">
       <el-breadcrumb separator="/">
         <el-breadcrumb-item :to="{ path: '/list' }">文章列表</el-breadcrumb-item>
@@ -8,6 +8,75 @@
     </div>
     <div class="box20"></div>
     <el-row :gutter="20" class="min_h480">
+      <el-col :span="18" class="mar20_b">
+        <el-container class="mar20_b min_h480">
+          <el-main class="border b_white pad20">
+            <h3 class="text-center">文章标题</h3>
+            <div class="line_h21">
+              但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁
+              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，
+            </div>
+          </el-main>
+        </el-container>
+        <el-container>
+          <el-main class="border b_white pad20">
+            <el-row class="mar20_b">
+              <el-col :span="2" class="text-center">
+                <el-image :src="headIcon" class="w40 border radius50"></el-image>
+              </el-col>
+              <el-col :span="22">
+                <el-input class="w100_per" type="textarea" placeholder="想对作者说些什么" :rows="4"></el-input>
+              </el-col>
+            </el-row>
+            <template v-for="n in 2">
+              <el-row class="mar10_t" :key="n">
+                <el-col :span="2" class="text-center">
+                  <el-image :src="headIcon" class="w40 border radius50"></el-image>
+                </el-col>
+                <el-col :span="22">
+                  <div class="clear">
+                    <span class="fb block line_h40 left">琳水一梦</span>
+                    <div class="right line_h40">
+                      <el-link class="mar20_r">举报</el-link>
+                      <el-link class="mar20_r">回复</el-link>
+                      <el-link class="mar20_r">查看回复</el-link>
+                      <el-link class>
+                        <i class="el-icon-star-on f18"></i>
+                        <em>20</em>
+                      </el-link>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+              <el-row class="pad10_b" :key="n">
+                <el-col :span="2">&nbsp;</el-col>
+                <el-col :span="22">
+                  <span
+                    class="block mar10_b"
+                  >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
+                  <div class="border_l block pad10">
+                    <div class="clear">
+                      <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
+                      <span class="left line_h40 pad10_lr fb">smileNicky</span>
+                      <span class="left line_h40 pad10_lr gray_9">回复</span>
+                      <span class="left line_h40 pad10_lr fb">琳水一梦</span>
+                      <span class="left line_h40 pad10_lr gray_9">1周前</span>
+                    </div>
+                    <p
+                      class="pad50_l mar0"
+                    >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</p>
+                  </div>
+                </el-col>
+              </el-row>
+            </template>
+            <div class="box40"></div>
+          </el-main>
+        </el-container>
+      </el-col>
       <el-col :span="6">
         <div :class="{isFix:isFixed}">
           <div class="mar20_b">
@@ -80,75 +149,6 @@
         </div>
         <div class="box20"></div>
       </el-col>
-      <el-col :span="18" class="mar20_b">
-        <el-container class="mar20_b min_h480">
-          <el-main class="border b_white pad20">
-            <h3 class="text-center">文章标题</h3>
-            <div class="line_h21">
-              但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，
-            </div>
-          </el-main>
-        </el-container>
-        <el-container>
-          <el-main class="border b_white pad20">
-            <el-row class="mar20_b">
-              <el-col :span="2" class="text-center">
-                <el-image :src="headIcon" class="w40 border radius50"></el-image>
-              </el-col>
-              <el-col :span="22">
-                <el-input class="w100_per" type="textarea" placeholder="想对作者说些什么" :rows="4"></el-input>
-              </el-col>
-            </el-row>
-            <template v-for="n in 2">
-              <el-row class="mar10_t" :key="n">
-                <el-col :span="2" class="text-center">
-                  <el-image :src="headIcon" class="w40 border radius50"></el-image>
-                </el-col>
-                <el-col :span="22">
-                  <div class="clear">
-                    <span class="fb block line_h40 left">琳水一梦</span>
-                    <div class="right line_h40">
-                      <el-link class="mar20_r">举报</el-link>
-                      <el-link class="mar20_r">回复</el-link>
-                      <el-link class="mar20_r">查看回复</el-link>
-                      <el-link class>
-                        <i class="el-icon-star-on f18"></i>
-                        <em>20</em>
-                      </el-link>
-                    </div>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-row class="pad10_b" :key="n">
-                <el-col :span="2">&nbsp;</el-col>
-                <el-col :span="22">
-                  <span
-                    class="block mar10_b"
-                  >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
-                  <div class="border_l block pad10">
-                    <div class="clear">
-                      <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
-                      <span class="left line_h40 pad10_lr fb">smileNicky</span>
-                      <span class="left line_h40 pad10_lr gray_9">回复</span>
-                      <span class="left line_h40 pad10_lr fb">琳水一梦</span>
-                      <span class="left line_h40 pad10_lr gray_9">1周前</span>
-                    </div>
-                    <p
-                      class="pad50_l mar0"
-                    >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</p>
-                  </div>
-                </el-col>
-              </el-row>
-            </template>
-            <div class="box40"></div>
-          </el-main>
-        </el-container>
-      </el-col>
     </el-row>
   </el-main>
 </template>
@@ -199,6 +199,9 @@ export default {
   width: 275px;
   position: fixed;
   top: 80px;
+}
+.pad20_0 {
+  padding: 20px 0 !important;
 }
 </style>
 

@@ -1,4 +1,4 @@
-@import "@/assets/css/lib/normalize.min.scss";
+@import '@/assets/css/lib/normalize.min.scss';
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
   line-height: 1.42857143;
   color: #333;
   font-size: 14px;
@@ -35,7 +35,7 @@ $theme-color1: #337ab7;
 .clear:after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
   visibility: hidden;
   height: 0;
 }
@@ -43,7 +43,7 @@ $theme-color1: #337ab7;
   &:before,
   &:after {
     display: table;
-    content: " ";
+    content: ' ';
   }
   &:after {
     clear: both;
@@ -552,6 +552,9 @@ i.white {
 .w680 {
   width: 680px;
 }
+.w720 {
+  width: 720px;
+}
 .w780 {
   width: 780px;
 }
@@ -841,6 +844,9 @@ i.white {
 }
 
 /*padding-top-bottom*/
+.pad5_tb {
+  padding: 5px 0px;
+}
 .pad10_tb {
   padding: 10px 0px;
 }
@@ -896,6 +902,9 @@ i.white {
 /* margin-left */
 .mar0_l {
   margin-left: 0;
+}
+.mar5_l {
+  margin-left: 5px;
 }
 .mar10_l {
   margin-left: 10px;

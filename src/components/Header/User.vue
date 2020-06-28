@@ -11,15 +11,15 @@
         </span>
       </template>
       <template v-else>
-        <span class="vertical_m">
+        <span class="vertical_m" @click="$router.push('/mine')">
           <i class="el-icon-s-custom"></i>
-          <span>用户：</span>
+          <span class="mar5_l">用户：</span>
           <span class="white cursor">{{userInfo&&userInfo.name}}</span>
         </span>
         <el-divider direction="vertical"></el-divider>
-        <span class="cursor vertical_m" @click="logoutNow">
+        <span class="cursor vertical_m mar5_r" @click="logoutNow">
           <i class="el-icon-switch-button"></i>
-          <span>退出</span>
+          <span class="mar5_l">退出</span>
         </span>
       </template>
     </div>
