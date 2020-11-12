@@ -189,8 +189,12 @@ export default {
         })
         .then(res => {
           if (res.code === "0") {
-            localStorage.setItem("authorization", "Bearer " + res.data.token);
+            if(res.data&&res.data.token){
+              localStorage.setItem("authorization", "Bearer " + res.data.token);
             this.$router.push("/index");
+            } else {
+              this.$message.error('用户名或密码输入错误');
+            }
           } else {
             this.$message.error(res.msg);
           }

@@ -148,6 +148,7 @@ export default {
         fctx2.beginPath();
         fctx2.moveTo(x, y);
         fctx2.lineTo(endX, endY);
+    
         fctx2.lineWidth = 3;
         fctx2.lineCap = "round";
         fctx2.strokeStyle = gradient;
@@ -307,7 +308,7 @@ export default {
               lines.push({
                 x: M.random() * wWidth,
                 y: M.random() * wHeight,
-                width: M.random() * (20 + n * 5) + (20 + n * 5) * 2, // 线的长度
+                width: M.random() * (20 + n * 5) + (30 + n * 5) * 2, // 线的长度
                 color: config.line.color,
                 alpha: M.random() * 0.2 + (config.line.alpha - n * 0.1),
                 speed: config.speed * (1 + n * 1), // 线的速度

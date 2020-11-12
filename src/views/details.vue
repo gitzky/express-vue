@@ -53,11 +53,8 @@
                 </el-col>
               </el-row>
               <el-row class="pad10_b" :key="n">
-                <el-col :span="2">&nbsp;</el-col>
-                <el-col :span="22">
-                  <span
-                    class="block mar10_b"
-                  >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
+                <el-col :span="22" :offset="2">
+                  <span class="block mar10_b">是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
                   <div class="border_l block pad10">
                     <div class="clear">
                       <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
@@ -192,11 +189,12 @@ export default {
 </script>
 
 <style lang="scss">
+.el-main{overflow: hidden;}
 .border_l {
   border-left: 2px solid #e2e2e2;
 }
 .isFix {
-  width: 275px;
+  width: 285px;
   position: fixed;
   top: 80px;
 }
