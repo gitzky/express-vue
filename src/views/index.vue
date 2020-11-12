@@ -4,7 +4,7 @@
       <el-col :span="18" class="mar20_b">
         <swiper />
         <div class="box20"></div>
-        <el-card class="z_articles mar20_b">
+        <el-card class="z_articles mar20_b noborder">
           <a href="javascript:;">
             <strong class="f18 fb mar10_b">博主置顶</strong>
             <p class="normal title">嫁人就嫁程序员</p>

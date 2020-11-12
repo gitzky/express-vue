@@ -39,6 +39,11 @@
       }
     }
   }
+  &.noborder{
+    .el-card__body:hover {
+      border-color: #fff;
+    }
+  }
   .el-card__body:hover {
     border: 1px #ff5e52 solid;
     border-radius: 3px;
