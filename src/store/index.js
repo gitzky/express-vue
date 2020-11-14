@@ -32,8 +32,6 @@ export default new Vuex.Store({
     },
 
     async getMemberByToken(context, arg) {
-      console.log('req', localStorage.getItem('authorization'))
-      console.log('arg', arg)
       const response = request.post('/api/users/getMemberByToken', arg)
       const userInfo = response.data
       userInfo && commit('SET_USERINFO', userInfo)
@@ -41,16 +39,25 @@ export default new Vuex.Store({
     },
 
     async selUserList(context, arg) {
-      console.log('arg', arg)
       const response = request.post('/api/users/selUserList', arg)
       return response
     },
 
     async selPostList(context, arg) {
-      console.log('arg', arg)
       const response = request.post('/api/posts/selPostList', arg)
       return response
     },
+
+    async selPostById(context, arg) {
+      const response = request.post('/api/posts/selPostById', arg)
+      return response
+    },
+    async addPost(context, arg) {
+      const response = request.post('/api/posts/addPost', arg)
+      return response
+    },
+
+    
   },
   modules: {},
 })

@@ -22,26 +22,26 @@
                   <el-col :span="20">
                     <p class="normal title1">
                       <el-tag size="small vertical_m">HTML</el-tag>
-                      <span class="vertical_m">{{item.newsName}}</span>
+                      <span class="vertical_m">{{item.title}}</span>
                     </p>
 
-                    <p class="normal gray_9 cont height42 ellipsis-2">{{item.newsIntro}}</p>
+                    <p class="normal gray_9 cont height42 ellipsis-2">{{item.content}}</p>
                     <p class="normal">
                       <span class="mar30_r gray_9">
                         <i class="el-icon-user-solid"></i>
-                        作者：{{item.newsAuthor}}
+                        作者：{{item.name}}
                       </span>
                       <span class="mar30_r gray_9">
                         <i class="el-icon-view"></i>
-                        阅读量：（{{item.readNum||0}}）
+                        阅读量：（{{item.pv||0}}）
                       </span>
                       <span class="mar30_r gray_9">
                         <i class="el-icon-chat-dot-square"></i>
-                        评论：100
+                        评论：{{item.comments}}
                       </span>
                       <span class="gray_9">
                         <i class="el-icon-time"></i>
-                        日期：{{item.newsTime}}
+                        日期：{{item.moment}}
                       </span>
                     </p>
                   </el-col>

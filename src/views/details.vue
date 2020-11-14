@@ -2,7 +2,9 @@
   <el-main class="block pad20_0">
     <div class="b_white pad15">
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/list' }">文章列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/list' }">
+          文章列表
+        </el-breadcrumb-item>
         <el-breadcrumb-item>文章详情</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
@@ -11,75 +13,87 @@
       <el-col :span="18" class="mar20_b">
         <el-container class="mar20_b min_h480">
           <el-main class="border b_white pad20">
-            <h3 class="text-center">文章标题</h3>
-            <div class="line_h21">
-              但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
-              ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁，
-            </div>
+            <h3 class="text-center">{{ tableData.title }}</h3>
+            <div class="line_h21">{{ tableData.content }}</div>
           </el-main>
         </el-container>
         <el-container>
           <el-main class="border b_white pad20">
             <el-row class="mar20_b">
               <el-col :span="2" class="text-center">
-                <el-image :src="headIcon" class="w40 border radius50"></el-image>
+                <el-image
+                  :src="headIcon"
+                  class="w40 border radius50"
+                ></el-image>
               </el-col>
               <el-col :span="22">
-                <el-input class="w100_per" type="textarea" placeholder="想对作者说些什么" :rows="4"></el-input>
+                <el-input
+                  class="w100_per"
+                  type="textarea"
+                  placeholder="想对作者说些什么"
+                  :rows="4"
+                ></el-input>
               </el-col>
             </el-row>
-            <template v-for="n in 2">
-              <el-row class="mar10_t" :key="n">
-                <el-col :span="2" class="text-center">
-                  <el-image :src="headIcon" class="w40 border radius50"></el-image>
-                </el-col>
-                <el-col :span="22">
+            <el-row class="mar10_t">
+              <el-col :span="2" class="text-center">
+                <el-image
+                  :src="headIcon"
+                  class="w40 border radius50"
+                ></el-image>
+              </el-col>
+              <el-col :span="22">
+                <div class="clear">
+                  <span class="fb block line_h40 left">琳水一梦</span>
+                  <div class="right line_h40">
+                    <el-link class="mar20_r">举报</el-link>
+                    <el-link class="mar20_r">回复</el-link>
+                    <el-link class="mar20_r">查看回复</el-link>
+                    <el-link class>
+                      <i class="el-icon-star-on f18"></i>
+                      <em>20</em>
+                    </el-link>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+            <el-row class="pad10_b">
+              <el-col :span="22" :offset="2">
+                <span class="block mar10_b">
+                  是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+                  ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+                </span>
+                <div class="border_l block pad10">
                   <div class="clear">
-                    <span class="fb block line_h40 left">琳水一梦</span>
-                    <div class="right line_h40">
-                      <el-link class="mar20_r">举报</el-link>
-                      <el-link class="mar20_r">回复</el-link>
-                      <el-link class="mar20_r">查看回复</el-link>
-                      <el-link class>
-                        <i class="el-icon-star-on f18"></i>
-                        <em>20</em>
-                      </el-link>
-                    </div>
+                    <el-image
+                      :src="headIcon"
+                      class="w40 border radius50 left"
+                    ></el-image>
+                    <span class="left line_h40 pad10_lr fb">smileNicky</span>
+                    <span class="left line_h40 pad10_lr gray_9">回复</span>
+                    <span class="left line_h40 pad10_lr fb">琳水一梦</span>
+                    <span class="left line_h40 pad10_lr gray_9">1周前</span>
                   </div>
-                </el-col>
-              </el-row>
-              <el-row class="pad10_b" :key="n">
-                <el-col :span="22" :offset="2">
-                  <span class="block mar10_b">是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</span>
-                  <div class="border_l block pad10">
-                    <div class="clear">
-                      <el-image :src="headIcon" class="w40 border radius50 left"></el-image>
-                      <span class="left line_h40 pad10_lr fb">smileNicky</span>
-                      <span class="left line_h40 pad10_lr gray_9">回复</span>
-                      <span class="left line_h40 pad10_lr fb">琳水一梦</span>
-                      <span class="left line_h40 pad10_lr gray_9">1周前</span>
-                    </div>
-                    <p
-                      class="pad50_l mar0"
-                    >是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基 ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基</p>
-                  </div>
-                </el-col>
-              </el-row>
-            </template>
+                  <p class="pad50_l mar0">
+                    是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+                    ，阿打发但是放阿基康宁，但是放阿基康宁，但是放阿基康宁，阿打发但是放阿基康宁打发但是放阿基
+                  </p>
+                </div>
+              </el-col>
+            </el-row>
             <div class="box40"></div>
           </el-main>
         </el-container>
       </el-col>
       <el-col :span="6">
-        <div :class="{isFix:isFixed}">
+        <div :class="{ isFix: isFixed }">
           <div class="mar20_b">
             <el-main class="border b_white pad20">
               <div class="clear">
-                <el-image :src="headIcon" class="w60 border radius50 left"></el-image>
+                <el-image
+                  :src="headIcon"
+                  class="w60 border radius50 left"
+                ></el-image>
                 <div class="left pad10_lr">
                   <p class="f16 normal line_h30">小元元</p>
                   <a href="/home" class="c_blue block line_h30">Ta的主页</a>
@@ -115,13 +129,22 @@
               </div>
               <div class="line"></div>
               <div class="clear pad20_t">
-                <el-button size="small" type="danger" class="w100 left">关注</el-button>
-                <el-button size="small" type="info" class="w100 right">私信</el-button>
+                <el-button size="small" type="danger" class="w100 left">
+                  关注
+                </el-button>
+                <el-button size="small" type="info" class="w100 right">
+                  私信
+                </el-button>
               </div>
             </el-main>
           </div>
           <div class="mar20_b">
-            <el-header class="border line_h40 bor_b_no b_white" style="height:40px;">推荐文章</el-header>
+            <el-header
+              class="border line_h40 bor_b_no b_white"
+              style="height: 40px;"
+            >
+              推荐文章
+            </el-header>
             <el-main class="border b_white pad20">
               <ul class>
                 <li class="pad10_tb border_b">
@@ -150,46 +173,61 @@
   </el-main>
 </template>
 <script>
-import headIcon from "@/assets/images/default.jpg";
+import headIcon from '@/assets/images/default.jpg'
 export default {
   data() {
     return {
       headIcon: headIcon,
-      isFixed: false
-    };
+      isFixed: false,
+      tableData: {},
+    }
   },
 
-  created() {},
+  created() {
+    this.loadData()
+  },
   mounted() {
     this.$nextTick(() => {
-      this.watchScroll();
-    });
+      this.watchScroll()
+    })
   },
 
   methods: {
     // 滚动条事件
     watchScroll() {
       window.addEventListener(
-        "scroll",
+        'scroll',
         () => {
           // 获取视口高度
-          console.log("window.scrollY", window.scrollY);
+          console.log('window.scrollY', window.scrollY)
 
           if (window.scrollY > 65) {
-            this.isFixed = true;
+            this.isFixed = true
           } else {
-            this.isFixed = false;
+            this.isFixed = false
           }
         },
-        true
-      );
-    }
-  }
-};
+        true,
+      )
+    },
+    loadData() {
+      this.$store
+        .dispatch('selPostById', { id: this.$route.params.id })
+        .then((res) => {
+          console.log('res', res)
+          if (res.code === '0') {
+            this.tableData = res.data
+          }
+        })
+    },
+  },
+}
 </script>
 
 <style lang="scss">
-.el-main{overflow: hidden;}
+.el-main {
+  overflow: hidden;
+}
 .border_l {
   border-left: 2px solid #e2e2e2;
 }
@@ -202,6 +240,3 @@ export default {
   padding: 20px 0 !important;
 }
 </style>
-
-
-

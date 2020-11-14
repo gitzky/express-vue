@@ -1,7 +1,7 @@
 <template>
   <el-main class="pad0 mar20_t">
     <el-row :gutter="0" class="min_h480">
-      <el-col :span="5" class="pad0">
+      <el-col :span="4" class="pad0">
         <ul class="z_mine">
           <li :class="{ active: index == 0 }" @click="index = 0">个人资料</li>
           <li :class="{ active: index == 1 }" @click="index = 1">我的收藏</li>
@@ -11,18 +11,29 @@
           <li :class="{ active: index == 5 }" @click="index = 5">我的留言</li>
         </ul>
       </el-col>
-      <el-col :span="19" class="mar20_b b_white pad0 min_h480 border">
+      <el-col :span="20" class="mar20_b b_white pad0 min_h480 border">
         <el-container class="pad20">
           <el-main class="clear">
             <div class="left">
-              <el-image class="w100 radius50 border block mar10_b" :src="headIcon"></el-image>
-              <el-button type="text" class="text-center w100" @click="dialogVisible=true">修改头像</el-button>
+              <el-image
+                class="w100 radius50 border block mar10_b"
+                :src="headIcon"
+              ></el-image>
+              <el-button
+                type="text"
+                class="text-center w100"
+                @click="dialogVisible = true"
+              >
+                修改头像
+              </el-button>
             </div>
             <div class="left pad20_tb">
               <div class="pad20_lr line_h40">
                 <em
                   class="inlineBlock w20 height20 b_red vertical_m text-center line_h20 radius3 white"
-                >1</em>
+                >
+                  1
+                </em>
                 <em class="vertical_m f24">海棠朵朵海棠朵朵</em>
               </div>
               <div class="f16 block pad20_lr gray_9">
@@ -38,29 +49,62 @@
                   size="small"
                 >
                   <el-form-item label="昵称：">
-                    <el-input v-if="edit" class="w450" placeholder="请输入"></el-input>
+                    <el-input
+                      v-if="edit"
+                      class="w450"
+                      placeholder="请输入"
+                    ></el-input>
                     <span v-else class="f16 gray_9">小元</span>
-                    <el-button class="right" type="text" @click="edit=true" size="medium">修改资料</el-button>
+                    <el-button
+                      class="right"
+                      type="text"
+                      @click="edit = true"
+                      size="medium"
+                    >
+                      修改资料
+                    </el-button>
                   </el-form-item>
                   <el-form-item label="性别：">
-                    <el-input class="w450" placeholder="请输入" v-if="edit"></el-input>
+                    <el-input
+                      class="w450"
+                      placeholder="请输入"
+                      v-if="edit"
+                    ></el-input>
                     <span class="f16 gray_9" v-else>男</span>
                   </el-form-item>
                   <el-form-item label="手机号：">
-                    <el-input class="w450" placeholder="请输入" v-if="edit"></el-input>
+                    <el-input
+                      class="w450"
+                      placeholder="请输入"
+                      v-if="edit"
+                    ></el-input>
                     <span class="f16 gray_9" v-else>18888888888</span>
                   </el-form-item>
                   <el-form-item label="邮箱：">
-                    <el-input class="w450" placeholder="请输入" v-if="edit"></el-input>
+                    <el-input
+                      class="w450"
+                      placeholder="请输入"
+                      v-if="edit"
+                    ></el-input>
                     <span class="f16 gray_9" v-else>18888888888@qq.com</span>
                   </el-form-item>
                   <el-form-item label="简介：">
-                    <el-input type="textarea" class="w450" placeholder="请输入" rows="5" v-if="edit"></el-input>
+                    <el-input
+                      type="textarea"
+                      class="w450"
+                      placeholder="请输入"
+                      rows="5"
+                      v-if="edit"
+                    ></el-input>
                     <span class="f16 gray_9" v-else>无</span>
                   </el-form-item>
                   <el-form-item v-if="edit" class="mar20_t">
-                    <el-button class="w80" @click="edit=false">取消</el-button>
-                    <el-button class="w80" @click="edit=false" type="primary">确认</el-button>
+                    <el-button class="w80" @click="edit = false">
+                      取消
+                    </el-button>
+                    <el-button class="w80" @click="edit = false" type="primary">
+                      确认
+                    </el-button>
                   </el-form-item>
                 </el-form>
               </div>
@@ -88,47 +132,58 @@
           将文件拖到此处，或
           <em>点击上传</em>
         </div>
-        <div class="el-upload__tip gray_9" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+        <div class="el-upload__tip gray_9" slot="tip">
+          只能上传jpg/png文件，且不超过500kb
+        </div>
       </el-upload>
       <span slot="footer" class="text-center block">
-        <el-button @click="dialogVisible = false" size="small" class="w100">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false" size="small" class="w100">确 定</el-button>
+        <el-button @click="dialogVisible = false" size="small" class="w100">
+          取 消
+        </el-button>
+        <el-button
+          type="primary"
+          @click="dialogVisible = false"
+          size="small"
+          class="w100"
+        >
+          确 定
+        </el-button>
       </span>
     </el-dialog>
   </el-main>
 </template>
 <script>
-import headIcon from "@/assets/images/default.jpg";
-import editor from "@/components/editor";
+import headIcon from '@/assets/images/default.jpg'
+import editor from '@/components/editor'
 export default {
   components: {
-    editor
+    editor,
   },
   data() {
     return {
       index: 0,
       headIcon: headIcon,
       edit: false,
-      dialogVisible: false
-    };
+      dialogVisible: false,
+    }
   },
 
   created() {},
 
   methods: {
     currentChange(val) {
-      this.pagination.pageNum = val;
+      this.pagination.pageNum = val
     },
     handleClick() {},
     onEditorChange($event) {
-      console.log("$event", $event);
+      console.log('$event', $event)
     },
-    handleClose() {}
-  }
-};
+    handleClose() {},
+  },
+}
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .pad0 {
   padding: 0 !important;
 }
@@ -142,7 +197,7 @@ ul.z_mine {
     line-height: 42px;
     background: #fff;
     color: #4d4d4d;
-    padding: 0 10px;
+    padding: 0 15px;
     cursor: pointer;
   }
   li:hover {
